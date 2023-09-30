@@ -3,6 +3,7 @@ import ApiTester from './ApiTester';
 import ConnectionContext, { defaultConnectionData } from './context/ConnectionContext';
 import UserGlobalData from './context/UserContext';
 import UserDisplay from './UserDisplay';
+import ConnectionProvider from './context/ConnectionContext';
 
 function App() {
 
@@ -12,12 +13,10 @@ function App() {
     <div className="App">
 
       <UserGlobalData>
-        <ConnectionContext.Provider value={defaultConnectionData}>
-          
+        <ConnectionProvider>
           <ApiTester />
           <UserDisplay />
-          
-        </ConnectionContext.Provider>
+        </ConnectionProvider>
       </UserGlobalData>
 
     </div>
