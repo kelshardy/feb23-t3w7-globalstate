@@ -1,0 +1,12 @@
+import { useContext } from "react";
+import ConnectionContext from "./ConnectionContext";
+
+export default function ApiTester(){
+    let connectionData = useContext(ConnectionContext);
+
+    return(
+        <div>
+            <h1>API URL: {connectionData.url}</h1>
+        </div>
+    )
+}
